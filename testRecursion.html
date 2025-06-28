@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+    <script>
+        function recursiveFunction(number){
+            if(number > 0){
+                console.log(number);
+                recursiveFunction(number - 1);
+            }
+        }
+        recursiveFunction(5);
+
+
+        function isPalindrome(word){
+            if(word.length <= 1){
+                return true;
+            }else if(word[0] !== word[word.length - 1]){
+                return false;
+            }else{
+                return isPalindrome(word.slice(1, word.length - 1));
+            }
+        }
+        console.log(isPalindrome("racecar")); 
+        console.log(isPalindrome("hello"));
+    </script>
+</body>
+</html>
